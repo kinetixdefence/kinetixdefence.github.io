@@ -4,8 +4,8 @@ description: >-
   KINETIX tracks and explains the technologies reshaping modern defence —
   land, sea, air, space, cyber and beyond — with sourced, fact-checked
   reporting and an editorial policy built for accuracy over speed.
-url: "https://kinetixdefence.github.io"
-baseurl: ""
+url: "https://chandraprataps68-web.github.io"
+baseurl: "/kinetixdefence"
 lang: en
 logo: /assets/img/kinetix-mark.svg
 
