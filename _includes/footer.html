@@ -1,0 +1,56 @@
+<div class="cta-strip">
+  <div class="wrap">
+    <div>
+      <h3>Get the weekly KINETIX brief</h3>
+      <p>One email, every Friday — the defence-tech developments worth knowing about. No spam, unsubscribe anytime.</p>
+    </div>
+    <a class="btn" href="{{ '/subscribe/' | relative_url }}">Subscribe free</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>KINETIX</h4>
+        <p class="footer-about">
+          KINETIX is an independent desk covering the technologies reshaping modern defence —
+          reported to a strict sourcing and fact-checking standard, and reviewed by an editor
+          before anything is published. Built to inform, not to sensationalise.
+        </p>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          {% for cat in site.data.categories limit:6 %}
+          <li><a href="{{ '/categories/' | relative_url }}{{ cat.slug }}/">{{ cat.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          {% for cat in site.data.categories offset:6 %}
+          <li><a href="{{ '/categories/' | relative_url }}{{ cat.slug }}/">{{ cat.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>About KINETIX</h4>
+        <ul>
+          <li><a href="{{ '/about/' | relative_url }}">Who we are</a></li>
+          <li><a href="{{ '/methodology/' | relative_url }}">Editorial &amp; fact-checking policy</a></li>
+          <li><a href="{{ '/submit-a-tip/' | relative_url }}">Submit a tip / source</a></li>
+          <li><a href="{{ '/corrections/' | relative_url }}">Corrections</a></li>
+          <li><a href="{{ '/privacy/' | relative_url }}">Privacy policy</a></li>
+          <li><a href="{{ '/terms/' | relative_url }}">Terms of use</a></li>
+          <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ site.time | date: "%Y" }} KINETIX. All rights reserved.</span>
+      <span>Reporting on publicly available information only. Not affiliated with any government or defence ministry.</span>
+    </div>
+  </div>
+</footer>

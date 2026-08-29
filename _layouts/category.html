@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% assign cat = site.data.categories | where: "slug", page.slug | first %}
+<div class="category-header">
+  <div class="wrap">
+    <p class="eyebrow">Category</p>
+    <h1>{{ cat.name }}</h1>
+    <p>{{ cat.blurb }}</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="section-head">
+    <h2>Latest in {{ cat.name }}</h2>
+  </div>
+  {% assign posts = site.categories[cat.slug] %}
+  {% if posts.size > 0 %}
+  <div class="article-list">
+    {% for post in posts %}
+    <div class="article-row">
+      <div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+        <p class="meta">{{ post.date | date: "%d %b %Y" }} &middot; {{ post.read_time | default: "4 min read" }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p style="color:var(--text-dim); padding:20px 0 60px;">No articles published in this category yet — check back soon.</p>
+  {% endif %}
+</div>

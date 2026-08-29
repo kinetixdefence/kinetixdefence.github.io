@@ -1,0 +1,45 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <div class="wrap">
+    <h1>Global defence technology, reported straight and sourced properly.</h1>
+    <p class="lede">
+      KINETIX tracks land, sea, air, space, cyber and industrial developments across the world's
+      militaries and defence industries — translated, cross-checked against multiple sources,
+      and reviewed by an editor before publication.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">11 coverage areas</span>
+      <span class="badge">Multi-source fact-checking</span>
+      <span class="badge">Human-approved before publish</span>
+      <span class="badge">Independent &amp; ad-supported</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="section-head">
+    <h2>Coverage areas</h2>
+  </div>
+  <div class="cat-grid">
+    {% for cat in site.data.categories %}
+    <a class="cat-card" href="{{ '/categories/' | relative_url }}{{ cat.slug }}/">
+      <span class="cat-index">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</span>
+      <h3>{{ cat.name }}</h3>
+      <p>{{ cat.blurb }}</p>
+    </a>
+    {% endfor %}
+  </div>
+
+  <div class="section-head">
+    <h2>Latest reporting</h2>
+    <a class="view-all" href="{{ '/archive/' | relative_url }}">View all &rarr;</a>
+  </div>
+  <div class="article-grid">
+    {% for post in site.posts limit:12 %}
+      {% include article-card.html post=post %}
+    {% endfor %}
+  </div>
+</div>

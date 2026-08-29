@@ -1,0 +1,44 @@
+- slug: land-systems
+  name: Land Systems
+  short: Land
+  blurb: Armoured vehicles, artillery, ground combat platforms and next-gen land warfare tech.
+- slug: naval-maritime
+  name: Naval & Maritime
+  short: Naval
+  blurb: Warships, submarines, undersea warfare and maritime domain awareness.
+- slug: air-aerospace
+  name: Air Power & Aerospace
+  short: Air Power
+  blurb: Fighters, bombers, stealth programs and the race for air dominance.
+- slug: missiles-space
+  name: Missiles, Hypersonics & Space
+  short: Missiles & Space
+  blurb: Strategic systems, missile defence, hypersonics and military space.
+- slug: unmanned-autonomous
+  name: Unmanned & Autonomous Systems
+  short: Unmanned
+  blurb: Drones, loitering munitions, uncrewed ground and sea vehicles, swarming.
+- slug: cyber-electronic-warfare
+  name: Cyber & Electronic Warfare
+  short: Cyber & EW
+  blurb: Jamming, spectrum dominance, cyber operations and information warfare.
+- slug: ai-c4isr
+  name: AI & C4ISR
+  short: AI & C4ISR
+  blurb: Battlefield AI, sensor fusion, command networks and decision support.
+- slug: soldier-systems
+  name: Soldier Systems
+  short: Soldier Systems
+  blurb: Exoskeletons, wearables, soldier protection and future-infantry programs.
+- slug: homeland-border-security
+  name: Homeland & Border Security
+  short: Homeland Security
+  blurb: Surveillance towers, border tech, critical-infrastructure protection.
+- slug: defence-industry
+  name: Defence Industry & Indigenisation
+  short: Industry
+  blurb: Industrial base shifts, indigenous programs and defence manufacturing.
+- slug: policy-geopolitics
+  name: Policy & Geopolitics
+  short: Policy
+  blurb: Budgets, alliances, doctrine and the strategic context behind the hardware.

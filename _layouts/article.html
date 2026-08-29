@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% assign cat = site.data.categories | where: "slug", page.categories | first %}
+<article>
+  <div class="article-header">
+    <div class="wrap">
+      <p class="eyebrow">
+        {% if cat %}<a href="{{ '/categories/' | relative_url }}{{ cat.slug }}/">{{ cat.name }}</a>{% endif %}
+      </p>
+      <h1>{{ page.title }}</h1>
+      <div class="article-meta-bar">
+        <span>By {{ page.author | default: site.author.name }}</span>
+        <span>Published {{ page.date | date: "%d %B %Y" }}</span>
+        {% if page.updated %}<span>Updated {{ page.updated | date: "%d %B %Y" }}</span>{% endif %}
+        <span>{{ page.read_time | default: "4 min read" }}</span>
+        {% if page.verified %}<span class="verify-badge">&#10003; Multi-source verified</span>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="article-body">
+      {{ content }}
+    </div>
+
+    {% if page.sources %}
+    <div class="sources-box">
+      <h4>Sources cited in this article</h4>
+      <ol>
+        {% for src in page.sources %}
+        <li><a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.label }}</a></li>
+        {% endfor %}
+      </ol>
+      {% if page.corroboration %}
+      <p class="corroboration-note">{{ page.corroboration }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</article>

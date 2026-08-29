@@ -1,0 +1,22 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+<div class="wrap">
+  <div class="section-head" style="margin-top:40px;">
+    <h2>All articles</h2>
+  </div>
+  <div class="article-list">
+    {% for post in site.posts %}
+    <div class="article-row">
+      <div class="num">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</div>
+      <div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+        <p class="meta">{{ post.date | date: "%d %b %Y" }} &middot; {{ post.read_time | default: "4 min read" }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

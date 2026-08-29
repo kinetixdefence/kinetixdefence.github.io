@@ -1,0 +1,40 @@
+title: KINETIX
+tagline: Global Defence Technology Intelligence
+description: >-
+  KINETIX tracks and explains the technologies reshaping modern defence —
+  land, sea, air, space, cyber and beyond — with sourced, fact-checked
+  reporting and an editorial policy built for accuracy over speed.
+url: "https://kinetixdefence.github.io"
+baseurl: ""
+lang: en
+logo: /assets/img/kinetix-mark.svg
+
+author:
+  name: KINETIX Editorial Desk
+
+# GitHub Pages-safe plugins (all on the official supported list)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+markdown: kramdown
+permalink: /:categories/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "article"
+      image: /assets/img/kinetix-social-card.svg
+
+exclude:
+  - scripts
+  - README.md
+  - EDITORIAL_PIPELINE.md
+  - GROWTH_PLAN.md
+  - node_modules

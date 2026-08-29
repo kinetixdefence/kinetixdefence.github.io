@@ -1,0 +1,25 @@
+<div class="topbar">
+  <div class="wrap">
+    <span>Independent defence-technology desk &middot; Sourced &amp; fact-checked &middot; Updated {{ site.time | date: "%d %b %Y" }}</span>
+    <span><a href="{{ '/methodology/' | relative_url }}">Editorial &amp; fact-checking policy</a></span>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img class="brand-mark" src="{{ '/assets/img/kinetix-mark.svg' | relative_url }}" alt="KINETIX mark">
+      <span class="brand-text">
+        <span class="brand-name">KINETIX</span>
+        <span class="brand-tagline">Global Defence Technology Intelligence</span>
+      </span>
+    </a>
+    <nav class="primary-nav">
+      <ul>
+        {% for cat in site.data.categories %}
+        <li><a href="{{ '/categories/' | relative_url }}{{ cat.slug }}/">{{ cat.short }}</a></li>
+        {% endfor %}
+        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

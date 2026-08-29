@@ -1,0 +1,54 @@
+# Starter source list for the editorial pipeline (scripts/draft_articles.py).
+# IMPORTANT: verify every feed URL before relying on it — outlets change their
+# RSS paths without notice, and a couple of these are best-guess paths that
+# you should confirm resolve (open the URL in a browser) before the pipeline
+# goes live. Add/remove freely; more sources = better corroboration.
+#
+# lang uses ISO 639-1 codes. official: true marks a primary/government source,
+# which the corroboration logic treats as counting extra toward the
+# "verified" threshold (see EDITORIAL_PIPELINE.md).
+
+- name: Breaking Defense
+  url: https://breakingdefense.com/feed/
+  lang: en
+  official: false
+- name: Defense News
+  url: https://www.defensenews.com/arc/outboundfeeds/rss/
+  lang: en
+  official: false
+- name: Naval News
+  url: https://www.navalnews.com/feed/
+  lang: en
+  official: false
+- name: Army Recognition
+  url: https://www.armyrecognition.com/rss/news.xml
+  lang: en
+  official: false
+- name: Defense One
+  url: https://www.defenseone.com/rss/technology/
+  lang: en
+  official: false
+- name: SpaceNews Military
+  url: https://spacenews.com/section/military/feed/
+  lang: en
+  official: false
+- name: PIB India — Ministry of Defence
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3
+  lang: en
+  official: true
+- name: Indian Defence News
+  url: https://www.indiandefensenews.in/feeds/posts/default
+  lang: en
+  official: false
+- name: Opex 360 (France, French-language)
+  url: https://www.opex360.com/feed/
+  lang: fr
+  official: false
+- name: ESUT (Germany, German-language)
+  url: https://www.esut.de/feed/
+  lang: de
+  official: false
+- name: Zona Militar (Spain/Latin America, Spanish-language)
+  url: https://www.zona-militar.com/feed/
+  lang: es
+  official: false
